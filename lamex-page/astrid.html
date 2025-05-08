@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovaflexFurnitures</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="/asset/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .container {
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .container .content-product {
+            background: white;
+            width: 80%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 20px;
+            gap: 20px;
+            box-sizing: border-box;
+        }
+
+        .container .content-product .product-image,
+        .container .content-product .product-details {
+            width: 100%;
+            height: 100%;
+            background: white;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .container .content-product .product-image .picture,
+        .container .content-product .product-image .contact-us {
+            width: 100%;
+            height: 320px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container .content-product .product-details h2,
+        .container .content-product .product-details h3,
+        .container .content-product .product-details p {
+            background: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 100%;
+        }
+
+        .container .content-product .product-details h3,
+        .container .content-product .product-details p {
+            font-size: 15px;
+        }
+
+        .container .content-product .product-details ul {
+            width: 100%;
+            height: auto;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .container .content-product .product-details ul li {
+            list-style: circle;
+            background: white;
+        }
+
+        .container .more-info {
+            background: white;
+            width: 80%;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+            flex-direction: column;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .container .more-info .galary {
+            display: flex;
+            gap: 30px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            background: white;
+        }
+
+        .container .more-info .galary img {
+            max-width: 350px;
+        }
+
+        @media (max-width: 900px) {
+            .container .content-product {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="logo">
+            <img src="../asset/MOVAFLEX2.png" alt="MOVAFLEX Image" width="300">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.php">Home</a></li>
+                <li>
+                    <a href="../inventory.php">Product </a>
+                </li>
+                <li><a href="../about.php">About</a></li>
+                <li><a href="../contact.php">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="content-product">
+                <div class="product-image">
+                    <div class="picture">
+                        <img src="../inventory_picture/2 - Astrid Café_CSE37_0.jpg" alt="" width="50%">
+                    </div>
+                    <div class="contact-us">
+                        <button style="width: 30%;">Contact-Us</button>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h2>
+                        product Description
+                    </h2>
+                    <p>The Astrid Cafe Chair and Astrid Club Chair combine modern elegance with ergonomic
+                        comfort, making them ideal for both commercial and residential settings. Designed with clean
+                        lines and a contemporary silhouette, these chairs elevate any space with their minimalist charm.
+                    </p><br>
+                    <h3>Astrid Cafe Chair:</h3>
+                    <p>Perfect for cafes, restaurants, and dining spaces, this lightweight yet sturdy chair features a
+                        curved backrest for comfortable support and a durable frame built for daily use. Available in a
+                        variety of finishes and upholstery options to complement any décor</p><br>
+                    <h3>Astrid Club Chair:</h3>
+                    <p>A luxurious addition to lounges, lobbies, or living areas, the club chair version offers a wider
+                        seat, plush cushioning, and a more relaxed seating posture. Upholstered in high-quality fabric
+                        or leather, the Astrid Club Chair balances style with indulgent comfort.</p><br>
+                    <ul>
+                        <h3>Featured</h3>
+                        <li>Sleek modern design with Scandinavian influence</li>
+                        <li>Durable metal or wooden frame (customizable options available)</li>
+                        <li>Upholstery options: high-resilience fabric, faux leather, or genuine leather</li>
+                        <li>Available in a range of colors and finishes</li>
+                        <li>Suitable for commercial and residential use</li>
+                        <li>Optional armrests (for Club Chair)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="more-info">
+                <h1 style="background: none;">Galary</h1>
+                <div class="galary">
+                    <img src="lamex-galary/1 - All Around Island, Astrid Cafe and Club Chair, Lumin 1P and This and That 2.jpg"
+                        alt="">
+                    <img src="lamex-galary/1 - Birds Table, Birds Divider and Astrid Cafe Chair.jpg" alt="">
+                    <img src="lamex-galary/1 - Brunch Veneer Round Table, Astrid Club and ELIO Modular Sofa Set.jpg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul>
+                <h1>Our Product</h1>
+                <li><a href="#">Office Chair</a></li>
+                <li><a href="#">Table</a></li>
+                <li><a href="#">Office/Table</a></li>
+            </ul>
+            <ul>
+                <h1>Menu Link</h1>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul>
+                <h1>Contact Us</h1>
+                <li><a href="#"><i class="fa-solid fa-location-dot"></i> 136 Calbayog St. Brgy. Highway Hills
+                        Mandaluyong City</a></li>
+                <li><a href="#"><i class="fa-solid fa-envelope"></i> sales@aim.com.p</a></li>
+                <li><a href="#"><i class="fa-solid fa-phone"></i> Tel. No. : (02) 8633 7526 ; 8532 5882</a></li>
+                <li><a href="#"><i class="fa-solid fa-box"></i> Movaflex</a></li>
+            </ul>
+        </footer>
+    </main>
+    <script src="function/script.js"></script>
+</body>
+
+</html>

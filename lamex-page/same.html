@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovaflexFurnitures</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="/asset/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .container {
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .container .content-product {
+            background: white;
+            width: 80%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 20px;
+            gap: 20px;
+            box-sizing: border-box;
+        }
+
+        .container .content-product .product-image,
+        .container .content-product .product-details {
+            width: 100%;
+            height: 100%;
+            background: white;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .container .content-product .product-image .picture,
+        .container .content-product .product-image .contact-us {
+            width: 100%;
+            height: 320px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container .content-product .product-details h2,
+        .container .content-product .product-details h3,
+        .container .content-product .product-details p {
+            background: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 100%;
+        }
+
+        .container .content-product .product-details h3,
+        .container .content-product .product-details p {
+            font-size: 15px;
+        }
+
+        .container .content-product .product-details ul {
+            width: 100%;
+            height: auto;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .container .content-product .product-details ul li {
+            list-style: circle;
+            background: white;
+        }
+
+        .container .more-info {
+            background: white;
+            width: 80%;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+            flex-direction: column;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .container .more-info .galary {
+            display: flex;
+            gap: 30px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            background: white;
+        }
+
+        .container .more-info .galary img {
+            max-width: 350px;
+        }
+
+        @media (max-width: 900px) {
+            .container .content-product {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="logo">
+            <img src="../asset/MOVAFLEX2.png" alt="MOVAFLEX Image" width="300">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.php">Home</a></li>
+                <li>
+                    <a href="../inventory.php">Product </a>
+                </li>
+                <li><a href="../about.php">About</a></li>
+                <li><a href="../contact.php">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="content-product">
+                <div class="product-image">
+                    <div class="picture">
+                        <img src="../inventory_picture/1 - Astrid Club Chair _MD15.jpg" alt="" width="50%">
+                    </div>
+                    <div class="contact-us">
+                        <button style="width: 30%;">Contact-Us</button>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h2
+                        style="background: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; width: 80%;">
+                        Sure is a family of chairs that includes high chair, café chair. Sure is a designed and
+                        collaborative chair, which can be used for works and catering area of a workplace. Sure is
+                        covered by quality fabric, giving you a soft and comfortable texture. The rich colorways and the
+                        slim base are designed to create a strong sense of beauty.
+                    </h2>
+                    <ul>
+                        <h3>Featured</h3>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="more-info">
+                <h1 style="background: none;">Galary</h1>
+                <div class="galary">
+                    <img src="lamex-galary/" alt="" width="400">
+                    <img src="lamex-galary/" alt="" width="400">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul>
+                <h1>Our Product</h1>
+                <li><a href="#">Office Chair</a></li>
+                <li><a href="#">Table</a></li>
+                <li><a href="#">Office/Table</a></li>
+            </ul>
+            <ul>
+                <h1>Menu Link</h1>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul>
+                <h1>Contact Us</h1>
+                <li><a href="#"><i class="fa-solid fa-location-dot"></i> 136 Calbayog St. Brgy. Highway Hills
+                        Mandaluyong City</a></li>
+                <li><a href="#"><i class="fa-solid fa-envelope"></i> sales@aim.com.p</a></li>
+                <li><a href="#"><i class="fa-solid fa-phone"></i> Tel. No. : (02) 8633 7526 ; 8532 5882</a></li>
+                <li><a href="#"><i class="fa-solid fa-box"></i> Movaflex</a></li>
+            </ul>
+        </footer>
+    </main>
+    <script src="function/script.js"></script>
+</body>
+
+</html>
