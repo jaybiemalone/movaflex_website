@@ -108,15 +108,45 @@
             max-width: 350px;
         }
 
-        span{
-            font-weight: bold;
-            background: white;
-        }
-
         @media (max-width: 900px) {
             .container .content-product {
                 flex-direction: column;
             }
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 4px solid white;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-size: 35px;
+            color: white;
+            cursor: pointer;
+            z-index: 10000;
         }
     </style>
 </head>
@@ -140,19 +170,19 @@
             <div class="content-product">
                 <div class="product-image">
                     <div class="picture">
-                        <img src="../inventory_picture/4 - Sure High Chair_MD17.jpg" alt="" width="50%">
+                        <img src="../inventory_picture/4 - Sure High Chair_MD17.jpg" alt="" width="50%" class="clickable">
                     </div>
                     <div class="contact-us">
-                        <button style="width: 30%;">Contact-Us</button>
+                        <form action="../contact.php" style="display: flex; justify-content: center; align-items: center; box-shadow: none;">
+                            <button style="width: 30%;">Contact-Us</button>
+                        </form>
                     </div>
                 </div>
                 <div class="product-details">
-                    <h2
-                        style="background: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; width: 80%;">
+                    <h2>
                         product Description
                     </h2>
-                    <p
-                        style="background: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; width: 80%;">
+                    <p>
                         Sure is a family of chairs that includes high chair, café chair. Sure is a designed and
                         collaborative chair, which can be used for works and catering area of a workplace. Sure is
                         covered by quality fabric, giving you a soft and comfortable texture. The rich colorways and the
@@ -166,34 +196,43 @@
                         <li><span>Optional Features:</span> Armrests, footrest (for high chair), felt glides</li>
                     </ul><br>
                     <div class="dimensions" style="display: flex; width: 100%;">
-                    <ul>
-                        <h3>Dimensions</h3>
-                        <p>For Café Chair:</p>
-                        <li>Height: 800 mm</li>
-                        <li>Seat Height: 460 mm</li>
-                        <li>Width: 520 mm</li>
-                        <li>Depth: 550 mm</li>
-                    </ul>
-                    <ul>
-                        <h3>For High Chair:</h3>
-                        <li>Height: 1050 mm</li>
-                        <li>Seat Height: 750 mm</li>
-                        <li>Width: 520 mm</li>
-                        <li>Depth: 550 mm</li>
-                    </ul>
+                        <ul>
+                            <h3>Dimensions</h3>
+                            <p>For Café Chair:</p>
+                            <li>Height: 800 mm</li>
+                            <li>Seat Height: 460 mm</li>
+                            <li>Width: 520 mm</li>
+                            <li>Depth: 550 mm</li>
+                        </ul>
+                        <ul>
+                            <h3>For High Chair:</h3>
+                            <li>Height: 1050 mm</li>
+                            <li>Seat Height: 750 mm</li>
+                            <li>Width: 520 mm</li>
+                            <li>Depth: 550 mm</li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="more-info">
                 <h1 style="background: none;">Galary</h1>
                 <div class="galary">
-                    <img src="lamex-galary/1 - Commons Folia and Sure High Chair.jpg" alt="">
-                    <img src="lamex-galary/5 - Sure Sitting Posture Guide.jpg" alt="">
-                    <img src="lamex-galary/3 - Sure High Chair_MD17.jpg" alt="">
-                    <img src="lamex-galary/2 - Sure Cafe Chair_MD17.jpg" alt="">
-                    <img src="lamex-galary/2 - Brunch MFC Meeting Table, Sure and Perch Low Back Side Ledge.jpg" alt="">
+                    <img src="lamex-galary/1 - Commons Folia and Sure High Chair.jpg" alt="" class="clickable">
+                    <img src="lamex-galary/5 - Sure Sitting Posture Guide.jpg" alt="" class="clickable">
+                    <img src="lamex-galary/3 - Sure High Chair_MD17.jpg" alt="" class="clickable">
+                    <img src="lamex-galary/2 - Sure Cafe Chair_MD17.jpg" alt="" class="clickable">
+                    <img src="lamex-galary/2 - Brunch MFC Meeting Table, Sure and Perch Low Back Side Ledge.jpg" alt=""
+                        class="clickable">
                 </div>
             </div>
+        </div>
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="Preview">
+        </div>
+        <div class="section-contact" id="section-contact">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.3147552301513!2d121.04560966956011!3d14.584310999118765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8a8cf7a0d75%3A0x611956f69ec64d9!2sMovaflex%20Designs%20Unlimited%2C%20Inc.!5e0!3m2!1sen!2sph!4v1746632689270!5m2!1sen!2sph" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <footer>
             <ul>
@@ -219,7 +258,28 @@
             </ul>
         </footer>
     </main>
-    <script src="function/script.js"></script>
+    <script>
+        const images = document.querySelectorAll('.clickable');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        window.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
 
 </html>

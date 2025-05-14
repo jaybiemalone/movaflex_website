@@ -113,6 +113,41 @@
                 flex-direction: column;
             }
         }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 4px solid white;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-size: 35px;
+            color: white;
+            cursor: pointer;
+            z-index: 10000;
+        }
     </style>
 </head>
 
@@ -135,10 +170,12 @@
             <div class="content-product">
                 <div class="product-image">
                     <div class="picture">
-                        <img src="../inventory_picture/2 - Astrid Café_CSE37_0.jpg" alt="" width="50%">
+                        <img src="../inventory_picture/2 - Astrid Café_CSE37_0.jpg" alt="" width="50%" class="clickable">
                     </div>
                     <div class="contact-us">
-                        <button style="width: 30%;">Contact-Us</button>
+                        <form action="../contact.php" style="display: flex; justify-content: center; align-items: center; box-shadow: none;">
+                            <button style="width: 30%;">Contact-Us</button>
+                        </form>
                     </div>
                 </div>
                 <div class="product-details">
@@ -172,12 +209,21 @@
                 <h1 style="background: none;">Galary</h1>
                 <div class="galary">
                     <img src="lamex-galary/1 - All Around Island, Astrid Cafe and Club Chair, Lumin 1P and This and That 2.jpg"
-                        alt="">
-                    <img src="lamex-galary/1 - Birds Table, Birds Divider and Astrid Cafe Chair.jpg" alt="">
+                        alt="" class="clickable">
+                    <img src="lamex-galary/1 - Birds Table, Birds Divider and Astrid Cafe Chair.jpg" alt=""
+                        class="clickable">
                     <img src="lamex-galary/1 - Brunch Veneer Round Table, Astrid Club and ELIO Modular Sofa Set.jpg"
-                        alt="">
+                        alt="" class="clickable">
                 </div>
             </div>
+        </div>
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="Preview">
+        </div>
+        <div class="section-contact" id="section-contact">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.3147552301513!2d121.04560966956011!3d14.584310999118765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8a8cf7a0d75%3A0x611956f69ec64d9!2sMovaflex%20Designs%20Unlimited%2C%20Inc.!5e0!3m2!1sen!2sph!4v1746632689270!5m2!1sen!2sph" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <footer>
             <ul>
@@ -203,7 +249,28 @@
             </ul>
         </footer>
     </main>
-    <script src="function/script.js"></script>
+    <script>
+        const images = document.querySelectorAll('.clickable');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        window.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
 
 </html>

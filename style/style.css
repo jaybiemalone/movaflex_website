@@ -1,14 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-@import url(/movaflex/style/product.css);
-@import url(/style/product-container.css);
-@import url(/style/home.css);
-@import url(/style/contact.css);
-@import url(/style/home-product.css);
-@import url(/style/about.css);
-@import url(/showroom/style/style.css);
-@import url(/collections-page/style/style.css);
-@import url(/featured_page/style/featured_style.css);
+@import url(about.css);
+@import url(contact.css);
+@import url(home.css);
+@import url(product_details.css);
 
 *{
     padding: 0;
@@ -89,6 +84,9 @@ body{
 .logo img{
   background: none;
 }
+h1{
+  background: none;
+}
 
 nav {
     padding: 10px;
@@ -107,7 +105,7 @@ nav ul {
 nav ul li {
     position: relative;
     margin: 0 10px;
-    background: whitesmoke;
+    background: none;
 }
 
 nav ul li:hover{

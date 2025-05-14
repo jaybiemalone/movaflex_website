@@ -1,7 +1,7 @@
 .movaflex-banner {
     width: 100%;
     height: 100vh;
-    background: url(/asset/alpha-website-featured-banner.jpg);
+    background: url(/asset/homebanner.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,7 +37,7 @@
     align-items: center;
 }
 
-.home-section2 .card .head{
+.home-section2 .card .head {
     width: 100%;
     background: none;
     padding: 20px;
@@ -48,7 +48,7 @@
     transform: scale(1.02);
 }
 
-.home-section2 .card .body-card{
+.home-section2 .card .body-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,71 +88,24 @@
 .home-section3 {
     width: 100%;
     height: auto;
-}
-
-.home-section3 .box {
-    width: 100%;
-    height: auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    padding: 30px 0;
+    box-sizing: border-box;
+    padding: 30px;
+    gap: 100px;
 }
 
-.home-section3 .box:nth-child(1){
-    justify-content: flex-start;
-}
-.home-section3 .box:nth-child(2){
-    justify-content: flex-end;
-}
-.home-section3 .box:nth-child(3){
-    justify-content: flex-start;
-}
-.home-section3 .box:nth-child(4){
-    justify-content: flex-end;
-}
-.home-section3 .box:nth-child(5){
-    justify-content: flex-start;
-}
-
-.home-section3 .box .boxbox {
-    width: 1200px;
-    height: 479px;
+.home-section3 .box-sec3 {
+    min-width: 500px;
+    height: 400px;
+    border: solid 1px black;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
-.home-section3 .box .boxbox .picture,
-.home-section3 .box .boxbox .pic-content {
-    width: 45%;
-    height: 75%;
-}
-
-.home-section3 .box .boxbox .picture {
-    background: grey;
-}
-
-.home-section3 .box .boxbox .picture:nth-child(1){
-    background: url(/asset/vault.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.home-section3 .box .boxbox .picture:nth-child(2){
-    background: url(/asset/rack.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@media (max-width: 1366px) {
-    .home-section3 .box{
-        justify-content: center;
-    }
-    .home-section3 .box .boxbox{
-        flex-direction: column;
-    }
-}
 
 .home-section4 {
     width: 100%;
@@ -176,19 +129,20 @@
     /* 4 per row with gaps */
     max-width: 450px;
     min-width: 280px;
-    height: 200px;
+    height: auto;
     box-shadow: 0 0 10px grey;
     border-radius: 10px;
     box-sizing: border-box;
     background-color: #F5F5F5;
 }
 
-.home4-box .card4 .for-icon{
+.home4-box .card4 .for-icon {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.home4-box .card4 .for-icon i{
+
+.home4-box .card4 .for-icon i {
     font-size: 50px;
 }
 
@@ -273,7 +227,7 @@
     margin-bottom: 50px;
 }
 
-.home-section5 .email-sub ul{
+.home-section5 .email-sub ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -286,4 +240,79 @@
 .home-section5 .email-sub ul li h1,
 .home-section5 .email-sub ul li span {
     background: none;
+}
+
+.home-section6{
+    overflow: hidden;
+}
+
+.home-section6 .img1-sec6 {
+    width: 100%;
+    height: 100vh;
+    background: url(/asset/b42239fd-1162-401d-a742-c4e62d0a1278.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-section6 .img2-sec6 {
+    width: 100%;
+    height: 100vh;
+    background: url(/asset/output.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-section6 .img3-sec6 {
+    width: 100%;
+    height: 100vh;
+    background: url(/asset/664e6f11-37cb-4a44-97c9-5aebb58b0001.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home-section6 .img2-sec6 .box{
+    float: right;
+    border-left: 1px solid grey;
+}
+
+.home-section6 .img1-sec6 .box,
+.home-section6 .img3-sec6 .box {
+    border-right: 1px solid grey;
+}
+.home-section6 .img1-sec6 .box,
+.home-section6 .img2-sec6 .box,
+.home-section6 .img3-sec6 .box {
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.529);
+    width: 600px;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    gap: 20px;
+}
+
+.home-section6 .img1-sec6 .box a,
+.home-section6 .img2-sec6 .box a,
+.home-section6 .img3-sec6 .box a{
+    border-bottom: 2px solid whitesmoke;
+}
+
+h1, p , h2 , h3 ,a{
+    background: none;
+}
+
+
+@media (max-width: 1366px) {
+
+}
+
+@media (max-width: 992px) {
+
 }
